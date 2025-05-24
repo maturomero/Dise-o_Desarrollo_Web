@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mi página Web</title>
+  <link rel="icon" href="/Icono/icon-page.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../css/estilo.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <ul>
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#favoritos">Tabla de Favoritos</a></li>
+        <li><a href="#trivia">Trivia</a></li>
+        <li><a href="#playlist">Playlist</a></li>
+        </ul>
+    </nav>
+
+    
+    <section id="inicio" class="seccion">
+        <h1>Hola, mi nombre es Matias Gonzalo Romero</h1>
+      
+        <div class="foto">
+          <img src="../img/IMG_9227.jpg" alt="Foto de Matías">
+        </div>
+      
+        <p class="frase">"La felicidad de nuestra vida, depende de la calidad de nuestros pensamientos"</p>
+      
+        <section class="enlaces">
+          <p class="subtitulo">Mis páginas favoritas son:</p>
+      
+          <div class="iconos">
+            <a href="https://enzocazenave.com/" target="_blank">
+              <img src="../Icono/icono1.svg" alt="icono porfolio">
+            </a>
+            <a href="https://rocamix.com.ar/?gad_source=1" target="_blank">
+              <img src="../Icono/construccion.svg" alt="icono roca mix">
+            </a>
+            <a href="https://ufodevelopment.com/" target="_blank">
+              <img src="../Icono/ufo-3-svgrepo-com.svg" alt="icono ufo">
+            </a>
+          </div>
+      
+          <p><a href="#favoritos" class="boton-ancla">Conocé más de mí...</a></p>
+        </section>
+      </section>
+    
+    <section id="favoritos" class="seccion favoritos">
+        <table>
+          <tr>
+            <th>Película Favorita</th>
+            <th>Animal Favorito</th>
+            <th>Pintura Favorita</th>
+            <th>Lugar Favorito</th>
+          </tr>
+          <tr>
+            <td><img src="../img/pelicula.png" alt="Película" title="En busca de la felicidad - 2006"></td>
+            <td><img src="../img/animal.png" alt="Animal" title="Pantera"></td>
+            <td><img src="../img/pintura.png" alt="Pintura" title="Guernica - Picasso - 1937"></td>
+            <td><img src="../img/lugar.png" alt="Lugar" title="El bosque sumergido"></td>
+          </tr>
+      
+        
+          <tr class="fila-extra">
+            <td colspan="4">Un poquito más de mí</td>
+          </tr>
+      
+        
+          <tr>
+            <td colspan="4" class="texto-extra">
+              <h2>Sobre mí</h2>
+              <p>Soy un apasionado por la tecnología, me encanta desarrollar proyectos personales y siempre estoy aprendiendo algo nuevo.</p>
+      
+              <h3>Intereses</h3>
+              <ul>
+                <li>Seguridad informática</li>
+                <li>Automatización de sistemas</li>
+                <li>Programación en Python y Java</li>
+                <li>Jugar al futbol</li>
+                <li>Cocinar</li>
+                <li>Y cuando tenga la posibilidad viajar mucho</li>
+              </ul>
+      
+              <h3>Objetivos</h3>
+              <p>Seguir mejorando mis habilidades técnicas, colaborar con equipos creativos y dejar huella en cada proyecto en el que participo.</p>
+            </td>
+          </tr>
+        </table>
+      </section>
+
+      <section id="trivia" class="seccion trivia">
+        <h2>Trivia de Historia Argentina</h2>
+      
+        
+        <div class="pregunta activa" id="pregunta1">
+          <p>¿Quién fue el primer presidente argentino?</p>
+          <div class="opciones-img">
+            <label>
+              <input type="radio" name="respuesta1" value="correcto">
+              <img src="../img/rivadavia.png" alt="Bernardino Rivadavia" title="Bernardino Rivadavia">
+            </label>
+            <label>
+              <input type="radio" name="respuesta1" value="incorrecto">
+              <img src="../img/san_martin.png" alt="José de San Martín" title="José de San Martín">
+            </label>
+          </div>
+          <button onclick="verificarRespuesta(1)">Responder</button>
+          <p class="feedback" id="feedback1"></p>
+        </div>
+      
+        
+        <div class="pregunta" id="pregunta2">
+          <p>¿Quién cruzó los Andes para liberar a Chile y Perú?</p>
+          <div class="opciones-img">
+            <label>
+              <input type="radio" name="respuesta2" value="incorrecto">
+              <img src="../img/belgrano.png" alt="Manuel Belgrano" title="Manuel Belgrano">
+            </label>
+            <label>
+              <input type="radio" name="respuesta2" value="correcto">
+              <img src="../img/san_martin.png" alt="José de San Martín" title="José de San Martín">
+            </label>
+          </div>
+          <button onclick="verificarRespuesta(2)">Responder</button>
+          <p class="feedback" id="feedback2"></p>
+        </div>
+      
+        
+        <div class="pregunta" id="pregunta3">
+          <p>¿Quién creó la bandera argentina?</p>
+          <div class="opciones-img">
+            <label>
+              <input type="radio" name="respuesta3" value="correcto">
+              <img src="../img/belgrano.png" alt="Manuel Belgrano" title="Manuel Belgrano">
+            </label>
+            <label>
+              <input type="radio" name="respuesta3" value="incorrecto">
+              <img src="../img/rivadavia.png" alt="Bernardino Rivadavia" title="Bernardino Rivadavia">
+            </label>
+          </div>
+          <button onclick="verificarRespuesta(3)">Responder</button>
+          <p class="feedback" id="feedback3"></p>
+        </div>
+        <div id="mensaje-final" class="mensaje-final">
+            <h3>¡Felicitaciones! 🎉</h3>
+            <p>Completaste la trivia de historia argentina. ¡Sos un/a crack del pasado nacional!</p>
+        </div>
+      </section>
+
+      <section id="playlist" class="seccion playlist">
+        <h2>🎵 Mi Playlist Favorita</h2>
+        <p>Estas son las 4 canciones que más me gustan, con sus videos:</p>
+      
+        <div class="cancion">
+          <h3>1. Paradise - Music Journeyy</h3>
+          <div class="video">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/krTxgZ38bFA" title="Paradise"
+              frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen></iframe>
+          </div>
+        </div>
+      
+        <div class="cancion">
+          <h3>2. Way Down We Go - Kaleo</h3>
+          <div class="video">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/sZ5SI6n1Ljs" title="Way Down We Go"
+              frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen></iframe>
+          </div>
+        </div>
+      
+        <div class="cancion">
+          <h3>3. La incodicional - Luis Miguel</h3>
+          <div class="video">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/1gGJqcZpdQE" title="La incodicional"
+              frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen></iframe>
+          </div>
+        </div>
+      
+        <div class="cancion">
+          <h3>4. Carretera - Prince Royce</h3>
+          <div class="video">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/GqQeQbGfHEY" title="La carretera"
+              frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen></iframe>
+          </div>
+        </div>
+      </section>
+      
+      
+      
+    
+      <script>
+        function verificarRespuesta(numero) {
+          const opciones = document.getElementsByName("respuesta" + numero);
+          const feedback = document.getElementById("feedback" + numero);
+          let seleccion = null;
+      
+          for (let i = 0; i < opciones.length; i++) {
+            if (opciones[i].checked) {
+              seleccion = opciones[i].value;
+              break;
+            }
+          }
+      
+          if (!seleccion) {
+            feedback.textContent = "Seleccioná una opción antes de continuar.";
+            feedback.style.color = "#c0392b";
+            return;
+          }
+      
+          if (seleccion === "correcto") {
+            feedback.textContent = "¡Correcto!";
+            feedback.style.color = "#27ae60";
+            document.getElementById("pregunta" + numero).classList.remove("activa");
+            const siguiente = document.getElementById("pregunta" + (numero + 1));
+            if (siguiente) siguiente.classList.add("activa");
+          } else {
+            feedback.textContent = "Respuesta incorrecta. Intentá de nuevo.";
+            feedback.style.color = "#c0392b";
+          }
+        }
+      </script>
+
+
+
+      <a href="#" class="btn-volver-arriba">↑</a>
+  </body>
+</html>

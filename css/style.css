@@ -1,0 +1,96 @@
+
+#background-video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -2;
+  object-fit: cover;
+  pointer-events: none; 
+}
+
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: -1;
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  color: white;
+  text-align: center;
+}
+
+.container {
+  margin-top: 80px;
+  padding: 20px;
+}
+
+.profile-img {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid white;
+  margin-bottom: 20px;
+}
+
+h1 {
+  margin: 10px 0;
+  font-size: 26px;
+}
+
+h2 {
+  margin: 5px 0 30px;
+  font-weight: normal;
+  font-size: 16px;
+  color: #dddddd;
+}
+
+.link {
+  display: block;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: white;
+  padding: 12px 20px;
+  margin: 12px auto;
+  width: 80%;
+  max-width: 300px;
+  border: 1px solid #ffffff33;
+  border-radius: 30px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.link:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  transform: scale(1.03);
+}
+
+
+.redes-sociales {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+}
+
+.icono-red {
+  width: 32px;
+  height: 32px;
+  transition: transform 0.3s ease;
+}
+
+.redes-sociales a:hover .icono-red {
+  transform: scale(1.2);
+}
+
+
+
+
