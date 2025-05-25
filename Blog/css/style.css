@@ -85,7 +85,7 @@ aside .perfil, aside .entradas {
   display: inline-block;
   margin: 10px 0;
   padding: 10px 18px;
-  background-color: #007BFF;
+  background-color: #007BFF; /* Azul patriótico */
   color: white;
   text-decoration: none;
   border-radius: 6px;
