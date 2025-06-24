@@ -99,6 +99,8 @@
 
 </head>
 
+<!-- Comentarios para el profe, para que se entienda mejor -->
+
 <body class="bg-gradient-to-br from-gray-50 to-white text-gray-800 font-sans">
   <!-- Header -->
   <header class="bg-white shadow sticky top-0 z-50">
@@ -311,20 +313,21 @@
     <div class="container mx-auto px-6">
       <h2 class="text-4xl font-bold mb-6 text-center text-indigo-700">Contacto</h2>
 
-      <form class="max-w-xl mx-auto bg-white p-8 rounded-lg shadow-md grid gap-4 animate-fade-in">
+      <form action="https://formspree.io/f/xvgrvpnw" method="POST"
+        class="max-w-xl mx-auto bg-white p-8 rounded-lg shadow-md grid gap-4 animate-fade-in">
         <h3 class="text-2xl font-semibold text-indigo-600 mb-4 text-center">¡Hablemos!</h3>
 
-        <input type="text" placeholder="Nombre"
+        <input type="text" name="nombre" placeholder="Nombre"
           class="p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 transition"
           required />
 
-        <input type="email" placeholder="Correo electrónico"
+        <input type="email" name="email" placeholder="Correo electrónico"
           class="p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 transition"
           required />
 
         <div class="h-[1px] bg-indigo-100 my-1 rounded"></div>
 
-        <textarea placeholder="Escribime lo que desees..." rows="5"
+        <textarea name="mensaje" placeholder="Escribime lo que desees..." rows="5"
           class="p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 transition"
           required></textarea>
 
@@ -339,6 +342,7 @@
       </form>
     </div>
   </section>
+
 
 
   <!-- Footer -->
@@ -380,7 +384,7 @@
     });
   </script>
 
-
+    <!-- Escritura (efecto) -->
   <script>
     const text = "Soy estudiante de Diseño y Desarrollo Web. Esta web muestra mi aprendizaje y creatividad.";
     const typingElement = document.getElementById("typing-text");
