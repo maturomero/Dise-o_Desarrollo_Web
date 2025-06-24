@@ -36,12 +36,14 @@ header nav a:hover {
 
 .contenedor-principal {
   display: flex;
-  flex-wrap: wrap;
-  padding: 2rem;
+  justify-content: space-between;
+  align-items: flex-start;
   max-width: 1200px;
   margin: 0 auto;
+  padding: 2rem;
   gap: 2rem;
 }
+
 
 main {
   flex: 3;
@@ -184,7 +186,10 @@ footer {
   text-align: center;
   padding: 1rem;
   font-size: 0.9rem;
+  width: 100%;
+  margin-top: 2rem;
 }
+
 
 main {
   max-width: 900px;
@@ -252,5 +257,85 @@ main img {
   color: #003d73;
   text-decoration: underline;
 }
+
+
+.newsletter {
+  background-color: #f9f9f9;
+  padding: 1rem;
+  margin-top: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 0 6px rgba(0,0,0,0.1);
+  font-size: 0.95rem;
+}
+
+.newsletter h4 {
+  font-size: 1.05rem;
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+.newsletter p {
+  margin-bottom: 0.8rem;
+  line-height: 1.4;
+}
+
+.newsletter form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.newsletter input[type="email"] {
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 0.9rem;
+}
+
+.newsletter button {
+  padding: 0.5rem;
+  background-color: #0052cc;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+.newsletter button:hover {
+  background-color: #003f99;
+}
+
+
+.btn-volver-arriba {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #003366;
+  color: white;
+  text-decoration: none;
+  padding: 0.5em 0.7em;
+  border-radius: 30%;
+  font-size: 1.2em;
+  font-weight: bold;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
+  z-index: 999;
+}
+
+.btn-volver-arriba:hover {
+  background-color: #003f99;
+}
+
+
+main {
+  flex: 3;
+  min-width: 0;
+}
+
+aside {
+  flex: 1;
+  min-width: 250px;
+}
+
 
 

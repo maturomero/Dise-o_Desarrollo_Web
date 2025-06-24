@@ -9,6 +9,10 @@
   <script defer src="script.js"></script>
 
   <style>
+    * {
+      scroll-behavior: smooth;
+    }
+
     .habilidad-card {
       position: relative;
       overflow: hidden;
@@ -25,6 +29,10 @@
       color: #374151;
       transition: transform 0.2s ease-in-out;
       cursor: default;
+    }
+
+    strong {
+      font-weight: 600;
     }
 
     .habilidad-card:hover {
@@ -71,21 +79,21 @@
       stroke: #ffffff;
     }
 
-     @keyframes fadeIn {
-    from {
-      opacity: 0;
-      transform: translateY(20px);
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
 
-    to {
-      opacity: 1;
-      transform: translateY(0);
+    .animate-fade-in {
+      animation: fadeIn 0.8s ease-out;
     }
-  }
-
-  .animate-fade-in {
-    animation: fadeIn 0.8s ease-out;
-  }
   </style>
 
 
@@ -96,17 +104,35 @@
   <header class="bg-white shadow sticky top-0 z-50">
     <div class="container mx-auto px-6 py-4 flex justify-between items-center">
       <h1 class="text-2xl font-extrabold text-indigo-600">Matías Gonzalo Romero</h1>
-      <nav>
-        <ul class="flex space-x-6 text-sm font-medium">
+
+      <nav class="flex items-center space-x-6 text-sm font-medium">
+        <ul class="flex space-x-6">
           <li><a href="#inicio" class="text-gray-600 hover:text-indigo-600">Inicio</a></li>
           <li><a href="#sobre-mi" class="text-gray-600 hover:text-indigo-600">Sobre mí</a></li>
           <li><a href="#proyectos" class="text-gray-600 hover:text-indigo-600">Proyectos</a></li>
           <li><a href="#habilidades" class="text-gray-600 hover:text-indigo-600">Habilidades</a></li>
           <li><a href="#contacto" class="text-gray-600 hover:text-indigo-600">Contacto</a></li>
         </ul>
+        <div id="sound-toggle" class="cursor-pointer text-indigo-600 hover:text-indigo-800 transition"
+          title="Activar/desactivar sonido">
+          <!-- Sonido Activado -->
+          <svg id="icon-on" xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24"
+            stroke-width="1.5" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round"
+              d="M11.25 5.25 6.75 9H3.75v6h3l4.5 3V5.25zM15.75 8.25a3 3 0 0 1 0 7.5M17.25 6a6.75 6.75 0 0 1 0 12" />
+          </svg>
+
+          <!-- Sonido Desactivado -->
+          <svg id="icon-off" xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 hidden" fill="none" viewBox="0 0 24 24"
+            stroke-width="1.5" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round"
+              d="M11.25 5.25 6.75 9H3.75v6h3l4.5 3V5.25zm6 6 3 3m0-3-3 3" />
+          </svg>
+        </div>
       </nav>
     </div>
   </header>
+
 
   <!-- Sección Inicio -->
   <section id="inicio" class="text-center py-24 bg-indigo-600 text-white">
@@ -281,38 +307,38 @@
 
 
   <!-- Contacto -->
-<section id="contacto" class="bg-indigo-50 py-20">
-  <div class="container mx-auto px-6">
-    <h2 class="text-4xl font-bold mb-6 text-center text-indigo-700">Contacto</h2>
+  <section id="contacto" class="bg-indigo-50 py-20">
+    <div class="container mx-auto px-6">
+      <h2 class="text-4xl font-bold mb-6 text-center text-indigo-700">Contacto</h2>
 
-    <form class="max-w-xl mx-auto bg-white p-8 rounded-lg shadow-md grid gap-4 animate-fade-in">
-      <h3 class="text-2xl font-semibold text-indigo-600 mb-4 text-center">¡Hablemos!</h3>
+      <form class="max-w-xl mx-auto bg-white p-8 rounded-lg shadow-md grid gap-4 animate-fade-in">
+        <h3 class="text-2xl font-semibold text-indigo-600 mb-4 text-center">¡Hablemos!</h3>
 
-      <input type="text" placeholder="Nombre"
-        class="p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 transition"
-        required />
+        <input type="text" placeholder="Nombre"
+          class="p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 transition"
+          required />
 
-      <input type="email" placeholder="Correo electrónico"
-        class="p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 transition"
-        required />
+        <input type="email" placeholder="Correo electrónico"
+          class="p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 transition"
+          required />
 
-      <div class="h-[1px] bg-indigo-100 my-1 rounded"></div>
+        <div class="h-[1px] bg-indigo-100 my-1 rounded"></div>
 
-      <textarea placeholder="Escribime lo que desees..." rows="5"
-        class="p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 transition"
-        required></textarea>
+        <textarea placeholder="Escribime lo que desees..." rows="5"
+          class="p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 transition"
+          required></textarea>
 
-      <button type="submit"
-        class="bg-indigo-600 text-white py-3 rounded-lg font-semibold hover:bg-indigo-700 hover:scale-105 transition duration-300 shadow-md">
-        Enviar
-      </button>
+        <button type="submit"
+          class="bg-indigo-600 text-white py-3 rounded-lg font-semibold hover:bg-indigo-700 hover:scale-105 transition duration-300 shadow-md">
+          Enviar
+        </button>
 
-      <p class="text-sm text-gray-500 text-center mt-2">
-        Te responderé lo antes posible. ¡Gracias por tu interés!
-      </p>
-    </form>
-  </div>
-</section>
+        <p class="text-sm text-gray-500 text-center mt-2">
+          Te responderé lo antes posible. ¡Gracias por tu interés!
+        </p>
+      </form>
+    </div>
+  </section>
 
 
   <!-- Footer -->
@@ -325,41 +351,54 @@
         target="_blank">Linktree</a>
     </div>
   </footer>
+
   <!-- Sonido al hacer clic -->
   <audio id="click-sound" src="../sonido_click/click.wav" preload="auto"></audio>
 
   <script>
     const clickSound = document.getElementById('click-sound');
+    const toggleBtn = document.getElementById('sound-toggle');
+    const iconOn = document.getElementById('icon-on');
+    const iconOff = document.getElementById('icon-off');
 
-    // Links del header y botón del CV
+    let sonidoActivo = true;
+
+    toggleBtn.addEventListener('click', () => {
+      sonidoActivo = !sonidoActivo;
+      iconOn.classList.toggle('hidden', !sonidoActivo);
+      iconOff.classList.toggle('hidden', sonidoActivo);
+    });
+
     const clickableLinks = document.querySelectorAll('header a, a[href*="drive.google.com"]');
-
     clickableLinks.forEach(link => {
       link.addEventListener('click', () => {
-        clickSound.currentTime = 0;
-        clickSound.play();
+        if (sonidoActivo) {
+          clickSound.currentTime = 0;
+          clickSound.play();
+        }
       });
     });
   </script>
 
-<script>
-  const text = "Soy estudiante de Diseño y Desarrollo Web. Este sitio muestra mi aprendizaje y creatividad.";
-  const typingElement = document.getElementById("typing-text");
-  let index = 0;
 
-  function typeText() {
-    if (index < text.length) {
-      typingElement.innerHTML += text.charAt(index);
-      index++;
-      setTimeout(typeText, 40); // velocidad de escritura
+  <script>
+    const text = "Soy estudiante de Diseño y Desarrollo Web. Esta web muestra mi aprendizaje y creatividad.";
+    const typingElement = document.getElementById("typing-text");
+    let index = 0;
+
+    function typeText() {
+      if (index < text.length) {
+        typingElement.innerHTML += text.charAt(index);
+        index++;
+        setTimeout(typeText, 40);
+      }
     }
-  }
 
-  window.addEventListener("load", () => {
-    typingElement.innerHTML = "";
-    typeText();
-  });
-</script>
+    window.addEventListener("load", () => {
+      typingElement.innerHTML = "";
+      typeText();
+    });
+  </script>
 
 
 </body>
