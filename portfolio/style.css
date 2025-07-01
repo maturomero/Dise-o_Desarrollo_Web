@@ -1,0 +1,101 @@
+* {
+  scroll-behavior: smooth;
+}
+
+.habilidad-card {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1rem;
+  background-color: white;
+  border: 1px solid #e0e7ff;
+  border-radius: 0.75rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  font-size: 1.125rem;
+  font-weight: 500;
+  color: #374151;
+  transition: transform 0.2s ease-in-out;
+  cursor: default;
+}
+
+strong {
+  font-weight: 600;
+}
+
+.habilidad-card:hover {
+  transform: scale(1.03);
+}
+
+.habilidad-card::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #6366f1;
+  top: 0;
+  left: -100%;
+  z-index: 0;
+  transition: left 1.5s ease;
+}
+
+.habilidad-card:hover::before {
+  left: 0;
+}
+
+.habilidad-card span {
+  position: relative;
+  z-index: 1;
+  color: #374151;
+  transition: color 0.3s ease;
+}
+
+.habilidad-card:hover span {
+  color: #ffffff;
+}
+
+.habilidad-card svg {
+  position: relative;
+  z-index: 1;
+  width: 1.5rem;
+  height: 1.5rem;
+  stroke: #4f46e5;
+  transition: stroke 0.3s ease;
+}
+
+.habilidad-card:hover svg {
+  stroke: #ffffff;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.8s ease-out;
+}
+
+.btn-calc {
+  background-color: #f3f4f6;
+  color: #374151;
+  font-size: 1.25rem;
+  padding: 0.6rem;
+  border-radius: 0.5rem;
+  text-align: center;
+  transition: all 0.2s ease-in-out;
+}
+
+.btn-calc:hover {
+  background-color: #4f46e5;
+  color: white;
+  transform: scale(1.05);
+}
